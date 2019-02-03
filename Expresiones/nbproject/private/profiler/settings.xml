@@ -4,4 +4,5 @@
 <comment/>
 <entry key="ACTIVATED_FEATURES">#org.netbeans.modules.profiler.v2.features.MethodsFeature@</entry>
 <entry key="org.netbeans.modules.profiler.v2.features.MonitorFeature_UI_GC_GRAPH_FLAG">false</entry>
+<entry key="SINGLE_FEATURE">false</entry>
 </properties>

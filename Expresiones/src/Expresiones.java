@@ -37,14 +37,16 @@ public class Expresiones {
             int[] digitos = null; 
             //Metodo Gnome sort
             digitos = getData();
+            GnomeSort gnomesort = new GnomeSort();
             System.out.println("Arreglo generado: " + Arrays.toString(digitos));
-            System.out.println("Algoritmo Gnome sort: " + Arrays.toString(GnomeSort.gnomeSort(digitos)));
+            System.out.println("Algoritmo Gnome sort: " + Arrays.toString(gnomesort.gnomeSort(digitos)));
 
 
             //Merge sort
             digitos = getData();
+            MergeSort mergesort = new MergeSort();
             System.out.println("\nArreglo generado: " + Arrays.toString(digitos));
-            System.out.println("Algoritmo Merge sort: " + Arrays.toString(MergeSort.mergesort(digitos)));
+            System.out.println("Algoritmo Merge sort: " + Arrays.toString(mergesort.mergesort(digitos)));
 
 
              //Quick sort
@@ -56,8 +58,9 @@ public class Expresiones {
 
             //Radix Sort
             digitos = getData();
+            RadixSort radix = new RadixSort();
             System.out.println("\nArreglo generado: " + Arrays.toString(digitos));
-            System.out.println("Algoritmo Radix sort: " + Arrays.toString(RadixSort.radixsort(digitos,REPETICION)));
+            System.out.println("Algoritmo Radix sort: " + Arrays.toString(radix.radixsort(digitos,REPETICION)));
 
             //Bubble short
             digitos = getData();
