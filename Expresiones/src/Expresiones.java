@@ -7,13 +7,15 @@ import java.io.FileWriter;
 import java.util.Arrays;
 
 /**
- *
+ * Clase de inicio para instanciar clases y realizar la pruebas de diferentes algoritmos de ordenamiento
  * @author Pablo Sao
  * @date 02/01/2018
  */
 public class Expresiones {
     
+    //variable para identificar la cantidad de números a generar
     private static int REPETICION = 3000;
+    //variable con la locación del archivo que almacenara los registros
     private static String PATH_FILE = "./numeros.txt";
     /**
      * @param args the command line arguments
@@ -28,44 +30,73 @@ public class Expresiones {
         
         System.out.println(String.format("Se ha finalizado la escritura de los %d dígitos. ", REPETICION));
         
-        System.out.println("\nObteniendo dígitos de archivo..");
+        System.out.println("\nObteniendo dígitos de archivo y realizando prueba de algoritmos.");
         
         
         
         //Verificamos que hayan registros para realizar las operaciones
         if(getData() != null){
             int[] digitos = null; 
+            
             //Metodo Gnome sort
+            
+            //Obteniendo dígitos del archivo
             digitos = getData();
+            
+            //Creando objeto
             GnomeSort gnomesort = new GnomeSort();
             System.out.println("Arreglo generado: " + Arrays.toString(digitos));
+            //ordenando array
             System.out.println("Algoritmo Gnome sort: " + Arrays.toString(gnomesort.gnomeSort(digitos)));
 
 
             //Merge sort
+            
+            //Obteniendo digitos del archivo
             digitos = getData();
+            
+            //Creando objeto
             MergeSort mergesort = new MergeSort();
             System.out.println("\nArreglo generado: " + Arrays.toString(digitos));
+            //ordenando array
             System.out.println("Algoritmo Merge sort: " + Arrays.toString(mergesort.mergesort(digitos)));
 
 
              //Quick sort
+             
+             //obteniendo digitos del archivo
             digitos = getData();
             System.out.println("\nArreglo generado: " + Arrays.toString(digitos));
+            
+            //Creando objeto
             QuickSort ob = new QuickSort(); 
+            
+            //ordenando array
             ob.sort(digitos, 0, (digitos.length - 1)); 
             System.out.println("Algoritmo Quick Sort: " + Arrays.toString(digitos));
 
             //Radix Sort
+            
+            //obteniendo digitos de archivo
             digitos = getData();
+            
+            //creando objeto
             RadixSort radix = new RadixSort();
             System.out.println("\nArreglo generado: " + Arrays.toString(digitos));
+            
+            //ordenando array
             System.out.println("Algoritmo Radix sort: " + Arrays.toString(radix.radixsort(digitos,REPETICION)));
 
             //Bubble short
+            
+            //obteniendo digitos de archivo
             digitos = getData();
             System.out.println("\nArreglo generado: " + Arrays.toString(digitos));
+            
+            //Creando objeto
             BurbujaSort burbuja = new BurbujaSort();
+            
+            //ordenando array
             System.out.println("Algoritmo Bubble sort: " + Arrays.toString(burbuja.burbuja(digitos)));
         }
         
@@ -95,7 +126,10 @@ public class Expresiones {
         }
     }
     
-    
+    /**
+     * Metodo para obtener dentro de un array los valores enteros almacenados dentro de un archivo .txt
+     * @return int[] devuelve arrey con los digitos del archivo leido
+     */
     private static int[] getData(){
         int[] datos = new int[REPETICION];
         
