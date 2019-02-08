@@ -10,7 +10,7 @@ import java.util.Arrays;
  * @author Pablo Sao
  * @date 02/01/2018
  */
-public class Expresiones implements Comparable{
+public class Expresiones{
     
     //variable para identificar la cantidad de números a generar
     private static int REPETICION = 3000;
@@ -175,9 +175,4 @@ public class Expresiones implements Comparable{
         return datos;
     }
 
-    @Override
-    public int compareTo(Object o) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
 }

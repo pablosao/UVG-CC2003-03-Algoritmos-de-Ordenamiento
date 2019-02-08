@@ -7,13 +7,16 @@
  * @version 01/02/2019
  */
 
-public class GnomeSort {
+public class GnomeSort implements Comparable<DatosNumericos>{
 	
-    public static int[] gnomeSort(int[] nums){ //takes unsorted array, returns sorted
+    public int[] gnomeSort(int[] nums){ //takes unsorted array, returns sorted
         int index=1; //start of search
         int temp;
         while(index<nums.length){ //until the array is fully sorted
-            if(nums[index]<nums[index-1]){ //compares nums[index] with nums[index-1]. if smaller, switch.
+            DatosNumericos numeros = new DatosNumericos(nums[index],nums[index-1]);
+            
+            //if(nums[index]<nums[index-1]){ //compares nums[index] with nums[index-1]. if smaller, switch.
+            if(compareTo(numeros)==1){
                 temp=nums[index];
                 nums[index]=nums[index-1];
                 nums[index-1]=temp;
@@ -28,5 +31,12 @@ public class GnomeSort {
         }
         return(nums); //reaching the end of the array- completely sorted, returns nums
     }
+
+    @Override
+    public int compareTo(DatosNumericos o) {
+        return o.dato1 < o.dato2? 1:0;
+    }
+
+   
 }
 
