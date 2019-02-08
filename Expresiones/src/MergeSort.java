@@ -7,9 +7,9 @@
 
 
 /**
- * @author Jose Cifuentes
- * @author David Soto
- * @version 09.02.2018
+ * @author Pablo Sao
+ * @author Andrea Elias
+
  */
 
 public class MergeSort{
