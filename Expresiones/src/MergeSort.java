@@ -12,7 +12,7 @@
 
  */
 
-public class MergeSort{
+public class MergeSort Comparable<DatosNumericos>{
 	
     private static int[] merge(int[] a, int[] b) {
         int[] c = new int[a.length + b.length];
@@ -43,5 +43,9 @@ public class MergeSort{
         for (int i = 1; i < a.length; i++)
             if (a[i] < a[i-1]) return false;
         return true;
+    }
+	 @Override
+    public int compareTo(DatosNumericos o) {
+        return o.dato2 > o.dato1? 1:0;
     }
 }
