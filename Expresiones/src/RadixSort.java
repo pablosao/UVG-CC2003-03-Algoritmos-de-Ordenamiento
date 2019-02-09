@@ -10,7 +10,7 @@ import java.util.Arrays;
  * 
  */
 
-public class RadixSort {
+public class RadixSort implements Comparable<DatosNumericos>{
 	
 	// A utility function to get maximum value in arr[]
     static int getMax(int arr[], int n)
@@ -66,6 +66,10 @@ public class RadixSort {
         for (int exp = 1; m/exp > 0; exp *= 10)
             countSort(arr, n, exp);
         return arr;
+    }
+	@Override
+    public int compareTo(DatosNumericos o) {
+        return o.dato2 > o.dato1? 1:0;
     }
 
 }
