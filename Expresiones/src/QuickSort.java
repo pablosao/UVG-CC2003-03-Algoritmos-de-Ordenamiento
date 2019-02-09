@@ -1,5 +1,4 @@
-class QuickSort 
-{ 
+class QuickSort implements Comparable <DatosNumericos>{ 
     /* This function takes last element as pivot, 
        places the pivot element at its correct 
        position in sorted array, and places all 
@@ -61,5 +60,8 @@ class QuickSort
             System.out.print(arr[i]+" "); 
         System.out.println(); 
     } 
-
+ @Override
+    public int compareTo(DatosNumericos o) {
+        return o.dato2 > o.dato1? 1:0;
+    }
 } 
